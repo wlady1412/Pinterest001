@@ -1,0 +1,453 @@
+/*diseño de las tarjetas*/
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #eaaee0ab;
+    overflow: hidden;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Asegura que cubra todo el ancho de la ventana */
+    height: 100vh; /* Asegura que cubra todo el alto de la ventana */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea 5 columnas */
+    grid-template-rows: repeat(3, 1fr);    /* Crea 3 filas */
+    gap: 15.5px; /* Espacio entre los elementos */
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background-container div {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 25px; /* Bordes redondeados */
+    height: 100%;  /* Las imágenes llenarán completamente cada celda */
+}
+
+/* Agregar un overlay oscuro sobre las imágenes */
+.background-container div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
+    border-radius: 25px; /* Bordes redondeados para el overlay */
+    z-index: 1; /* Asegura que el overlay esté encima de la imagen */
+}
+
+/* Definir las imágenes de fondo */
+.background-container div:nth-child(1) { background-image: url('./mi proyecto imagenes/comida1.jpg'); }
+.background-container div:nth-child(2) { background-image: url('./mi proyecto imagenes/comida2.jpg'); }
+.background-container div:nth-child(3) { background-image: url('./mi proyecto imagenes/comida3.jpg'); }
+.background-container div:nth-child(4) { background-image: url('./mi proyecto imagenes/comida4.jpg'); }
+.background-container div:nth-child(5) { background-image: url('./mi proyecto imagenes/comida5.jpg'); }
+.background-container div:nth-child(6) { background-image: url('./mi proyecto imagenes/comida6.jpg'); }
+.background-container div:nth-child(7) { background-image: url('./mi proyecto imagenes/comida7.jpg'); }
+.background-container div:nth-child(8) { background-image: url('./mi proyecto imagenes/comida8.jpg'); }
+.background-container div:nth-child(9) { background-image: url('./mi proyecto imagenes/comida9.jpg'); }
+.background-container div:nth-child(10) { background-image: url('./mi proyecto imagenes/comida10.jpg'); }
+.background-container div:nth-child(11) { background-image: url('./mi proyecto imagenes/comida11.jpg'); }
+.background-container div:nth-child(12) { background-image: url('./mi proyecto imagenes/comida12.jpg'); }
+.background-container div:nth-child(13) { background-image: url('./mi proyecto imagenes/comida13.jpg'); }
+.background-container div:nth-child(14) { background-image: url('./mi proyecto imagenes/comida14.jpg'); }
+.background-container div:nth-child(15) { background-image: url('./mi proyecto imagenes/comida15.jpg'); }
+.background-container div:nth-child(16) { background-image: url('./mi proyecto imagenes/comida16.jpg'); }
+.background-container div:nth-child(17) { background-image: url('./mi proyecto imagenes/comida17.jpg'); }
+.background-container div:nth-child(18) { background-image: url('./mi proyecto imagenes/comida18.jpg'); }
+.background-container div:nth-child(19) { background-image: url('./mi proyecto imagenes/comida19.jpg'); }
+.background-container div:nth-child(20) { background-image: url('./mi proyecto imagenes/comida20.jpg'); }
+
+header {
+    background-color: white;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding: 10px 20px;
+    text-align: center;
+    height: 50px;
+    align-items: flex-end;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo a {
+    margin: 0 10px; /* Espaciado entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color:#000000;
+    font-weight: bold;
+}
+
+
+.enlaces {
+    display: flex; /* Utiliza flexbox para alinear los elementos dentro de .enlaces */
+    align-items: center;
+}
+
+.enlaces a {
+    margin: 0 10px; /* Añade un margen horizontal entre los enlaces dentro de la clase enlaces */
+}
+.pinterestLink a{
+    color: rgb(255, 0, 0);
+}
+.logo img {
+    height: 40px; /* Establece una altura específica para las imágenes dentro de la clase logo */
+}
+
+.buscador {
+    display: flex; /* Utiliza flexbox para alinear los elementos del buscador */
+}
+
+.buscador input {
+    padding: 10px; /* Añade padding interno al campo de entrada del buscador */
+    border: 1px solid #ccc; /* Establece un borde gris claro alrededor del campo de entrada */
+    border-radius: 3px; /* Redondea las esquinas del campo de entrada */
+}
+
+.buscador button {
+    padding: 10px; /* Añade padding interno al botón de búsqueda */
+    background-color: #e60023; /* Establece un color de fondo rojo para el botón */
+    color: white; /* Establece el color del texto en blanco */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 3px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+.enlaces a {
+    margin-left: 20px; /* Añade un margen izquierdo a los enlaces de ambas clases */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color:#000000; /* Establece un color de texto gris oscuro para los enlaces */
+    font-weight: bold;
+}
+
+.iniciar_sesion , .registrate , #continue{
+    display: inline-flex; /* Cambia a inline-flex para que el botón se ajuste al contenido */
+    padding: 10px 20px; /* Añade padding interno para un mejor aspecto */
+    padding-left: var(--space-300);
+    padding-right: var(--space-300);
+    padding-bottom: var(--space-200);
+    padding-top: var(--space-200);
+    height: 40px; /* Ajusta la altura según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 0; /* Añade padding interno */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Establece el texto en negrita */
+    margin-left: 10px; /* Añade un margen izquierdo para separar los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente el texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.iniciar_sesion {
+    background-color: white; /* Color de fondo para el botón de iniciar sesión */
+    width: auto; /* Establece el ancho al 100% del contenedor padre */
+    display: inline-flex; /* Cambia a inline-flex para que el botón se ajuste al contenido */
+    padding: 10px 20px; /* Añade padding interno para un mejor aspecto */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Establece el texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave para el color de fondo y el borde */
+    text-align: center; /* Asegura que el texto esté centrado */
+    background-color: white; /* Color de fondo para el botón de iniciar sesión */
+}
+
+.iniciar_sesion:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el mouse a un gris más oscuro */
+    border-color: #d6001b; /* Cambia el color del borde al pasar el mouse */
+}
+
+.registrate {
+    background-color: #d3d3d3; /* Color de fondo gris claro para el botón de registrarse */
+    width: auto; /* Establece el ancho al 100% del contenedor padre */
+    display: inline-flex; /* Cambia a inline-flex para que el botón se ajuste al contenido */
+    padding: 10px 20px; /* Añade padding interno para un mejor aspecto */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Establece el texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, border-color 0.3s; /* Transición suave para el color de fondo y el borde */
+    text-align: center; /* Asegura que el texto esté centrado */
+    background-color: white; /* Color de fondo para el botón de iniciar sesión */
+}
+
+.registrate:hover {
+    background-color: #a9a9a9; /* Cambia el color de fondo al pasar el mouse a un gris más oscuro */
+}
+
+#continue{
+    width: 100%; /* Establece el ancho al 100% del contenedor padre */
+    height: 40px; /* Ajusta la altura según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px; /* Añade padding interno */
+    margin-top: 10px;
+    background-color: red; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.iniciar_sesion {
+background-color: red;
+}
+.registrate{
+    background-color: #d3d3d3; /* Establece un color de fondo gris claro */
+    color: black; /* Color del texto */
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 10px; /* Añade padding interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+#continue:hover ,.iniciar_sesion:hover {
+    background-color: darkred; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/*formato de inicio de sesion*/
+#ajusteIniciarSesion{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    height: 502px;
+}
+.ajusteDeSpaceLeft{
+    margin-left: 10px; /* Ajusta el margen izquierdo */
+}
+.ajusteDeSpaceRight{
+    width: 300px; /* Establece el ancho */
+    margin-right: 200px; /* Ajusta el margen derecho */
+}
+.iniciarsesion{
+    background-color: white;
+    display: flex;
+    width: 485px;
+    height: 506px;
+    flex-direction: column;
+    align-items: center;
+}
+.ingresoCorreo{
+    margin: 0 auto; /* Centra el contenedor */
+    width: 400px; /* Ancho del contenedor */
+    height: 80px; /* Alto del contenedor */
+    padding-top: 15px; /* Añade padding superior */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+h2, p {
+    margin: 0 auto 22px; /* Margen inferior para separar del siguiente elemento */
+    text-align: center; /* Justifica el texto */
+    color: rgb(33, 25, 34); /* Color del texto */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Fuente */
+    margin-bottom: 10px;
+}
+p {
+    width: 70%;
+    height: 30px;
+}
+h2{
+    font-size: 30px;
+}
+
+.box {
+    background-color: rgb(255, 255, 255); /* Color de fondo */
+    text-align: center; /* Centra el texto dentro de la caja */
+}
+
+form{
+    max-width: 300px;
+    max-height: 500px;
+    margin: auto;
+   text-size-adjust: none;
+   font-size: 12px;
+   -webkit-tap-highlight-color: transparent;
+   text-decoration: none;
+   display: flex;
+   margin-bottom: 0;
+   margin-top: 0;
+   margin-left: 0;
+   margin-right: 0;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
+   height: 100%;
+   width: 100%; 
+}
+label{
+    display: block;
+}
+.label1{
+    margin: 26px 0 5px;
+}
+.label2{
+    margin: 10px 0 5px;
+}
+.label3{
+    margin: 0 0 5px;
+}
+
+input , select , button{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+button{
+    background-color: red;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(169, 1, 1);
+}
+
+#incentivo{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 70px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-weight: 500;
+    width: 55px;
+    height: 100%;
+
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Aumenta el padding para un aspecto más cómodo */
+    border: 2px solid #e2e2e2; /* Un borde gris claro */
+    border-radius: 15px; /* Aumenta el valor para bordes más circulares */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    font-size: 14px; /* Tamaño de fuente más grande */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+.inputTopyBottom{
+padding: 15px;
+}
+
+input:focus {
+    border-color: #e60023; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+    box-shadow: 0 0 5px rgba(230, 0, 35, 0.5); /* Sombra al enfocar */
+}
+
+.foto img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho del pin */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 15px; /* Redondea las esquinas de las imágenes */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+
+
+.foto h3 {
+    padding: 10px; /* Añade padding interno al título del pin */
+    font-size: 16px; /* Establece un tamaño de fuente específico para el título */
+    margin: 0; /* Elimina el margen por defecto del título */
+}
+
+.pin p {
+    padding: 0 10px 10px; /* Añade padding interno al párrafo del pin */
+    font-size: 14px; /* Establece un tamaño de fuente específico para el párrafo */
+    color: #555; /* Establece un color de texto gris medio para el párrafo */
+}
+
+footer {
+    background-color: white; /* Establece el color de fondo del pie de página */
+    text-align: center; /* Centra el texto en el pie de página */
+    font-size: 12px; /* Establece un tamaño de fuente específico para el pie de página */
+    padding-top: 10px; /* Añade padding superior al pie de página */
+    padding-bottom: 10px; /* Añade padding inferior al pie de página */
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil al pie de página */
+    z-index: 1; /* Coloca el pie de página en la capa más alta */
+}
+
+footer .informacion a {
+    margin: 0 3px; /* Añade un margen horizontal entre los enlaces en el pie de página */
+    text-decoration: none; /* Elimina el subrayado de los enlaces en el pie de página */
+    color: #333; /* Establece un color de texto gris oscuro para los enlaces en el pie de página */
+}
+.optionO{
+    margin-bottom: 8px; /* Espacio entre las opciones */
+    margin-top: 8px; /* Espacio entre las opciones */
+    overflow: hidden; /* Oculta el contenido que excede el ancho de la opción */
+    text-align: center; /* Centra el texto en la opción */
+    font-size: 14px; /* Establece un tamaño de fuente específico para las opciones */
+    color: rgb(51, 51, 51); /* Establece un color de texto gris oscuro para las opciones */
+    font-weight: bold; /* Establece un peso de fuente fuerte para las opciones */
+}
+.inicioCtaGoogle{
+    position: relative; /* Permite posicionar el logo dentro del contenedor */
+    width: 100%; /* Ajusta el ancho según sea necesario */
+}
+.inicioCtaGoogle input{
+    width: 100%; /* Hace que el input ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno del input */
+    padding-left: 80px; /* Espaciado interno del input con el logo */
+    padding-right: 55px; /* Espaciado interno del input con el botón */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    border-radius: 25px; /* Bordes redondeados */
+}
+#googleLogo{
+    height: 30px; /* Establece la altura del logo de Google a 20px */
+    padding-top: 4px; /* Espaciado superior del logo */
+    position: absolute; /* Permite posicionar el logo dentro del input */
+    left: 10px; /* Ajusta la posición del logo desde la izquierdo */
+    top: 50%; /* Centra verticalmente el logo */
+    transform: translateY(-50%); /* Ajusta la posición vertical del logo */
+    pointer-events: none; /* Evita que el logo interfiera con la interacción del input */
+}
+.terminos {
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.politicyServis, .politicyEnNegrita {
+    display: inline; /* Cambia a inline para que se muestren en la misma línea */
+    margin: 0; /* Elimina márgenes para evitar desbordamientos */
+}
+.politicyEnNegrita{
+    font-weight: bold; /* Establece un peso de fuente fuerte */
+}
+.politicyServis{
+    color: #555; /* Establece un color de texto gris oscuro */
+}
+
+.capa2 {
+    position: relative; /* Crea un contexto de apilamiento */
+    z-index: 2; /* Este elemento estará delante */
+}
+
+.capa1 {
+    position: relative; /* Crea un contexto de apilamiento */
+    z-index: 1; /* Este elemento estará detrás */
+}

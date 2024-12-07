@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest - Inicio</title>
+    <link rel="stylesheet" href="./DiseñoHome.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="background-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <div><img src="./pinterest_logo_icon.webp" alt="Pinterest Logo"></div>
+                <div class="pinterestLink"><a href="#pinterest" >Pinterest</a></div>
+                <a href="#hoy">Hoy</a>
+                <a href="#explorar">Explorar</a>
+            </div>
+            <div class="enlaces">
+                <a href="#informacion">Información</a>
+                <a href="#empresa">Empresa</a>
+                <a href="#blog">Blog</a>
+                <button id="iniciar_sesion" class="iniciar_sesion" href="#iniciar_sesion">Iniciar sesión</button>
+                <button id="registrate" class="registrate" href="#registrate">Registrate</button>
+        </nav>
+    </header>
+<div class="capa1">
+    <div id="ajusteIniciarSesion">
+        <div class="iniciarsesion ajusteDeSpaceLeft">
+            <div class="ingresoCorreo">
+                <div class="box">
+            <h2>Bienvenida a Pinterest</h2>
+            <p>Encuentra nuevas ideas para probar</p><!--en este parrafo del home el original tiene una funcion de JS que cambia el parrafo en distintos contectos con al final puede aparecer "probar, experimentar, conocer, etc."-->
+                </div>
+            </div>
+            <form>
+                <label class="label1" for="correo">Correo eletrónico</label>
+                <input type="correo" id="correo" class="inputTopyBottom" name="correo" placeholder="Correo electrónico">
+                <label class="label2" for="password">Contraseña</label>
+                <input type="password" id="password" class="inputTopyBottom" name="password" placeholder="Crear una contraseña" required>
+                <label class="label2" for="fecha">Fecha de nacimiento</label>
+                <input type="date" id="fecha" class="inputTopyBottom" name="fecha" required>
+                <button id="continue" type="submit">Continuar</button>
+                <p class="optionO">O</p>
+                <div class="inicioCtaGoogle"><label class="label3" for="click"></label>
+                    <img id="googleLogo" src="./Google_Logo _icon.jpg" alt="Google Logo">
+                    <input type="text" id="texto" name="correoGoogle" placeholder="Continuar con Google">
+                </div>
+            <div class="terminos">
+                <div class="politicyServis">Si continúas,aceptas los </div>
+                <div class="politicyEnNegrita">Términos del servicio</div>
+                <div class="politicyServis"> de Pinterest y confirmas que has leído nuestra </div>
+                <div class="politicyEnNegrita">Política de privacidad.</div>
+            </div>
+            </form>
+        </div>
+        <div class="ajusteDeSpaceRight"><h1 id="incentivo">Regístrate para ver tus ideas</h1></div>
+    </div>
+</div>
+<div class="capa2">
+    <footer>
+        <div id="informtion" class="informacion">
+            <a href="#terms-of-service">Términos de servicio</a>
+            <a href="#privacy-policy">Política de privacidad</a>
+            <a href="#help">Ayuda</a>
+            <a href="#aplicacioniPhone">Aplicación para iPhone</a>
+            <a href="#aplicacionAndroid">Aplicación para Android</a>
+            <a href="#users">Usuarios</a>
+            <a href="#collections">Colecciones</a>
+            <a href="#shops">Compras</a>
+            <a href="#today">Hoy</a>
+            <a href="ideas">Explorar</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
