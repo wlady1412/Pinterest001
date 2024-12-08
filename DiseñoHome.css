@@ -2,9 +2,19 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     margin: 0; 
-    padding: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos hijos se apilen verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    min-width: 100vw; /* Asegura que el body ocupe al menos el 100% de la anchura de*/
+    max-height: 100vh; /* Asegura que el body no supere el 100% de la altura de la ventana*/
+    max-width: 100vw; /* Asegura que el body no supere el*/
     background-color: #eaaee0ab;
-    overflow: hidden;
+    overflow: hidden; /*ajusto para que no se vea el scroll*/
+}
+/* Contenedor principal que ocupa el espacio restante */
+.main-content {
+    flex: 1; /* Permite que este contenedor crezca para ocupar el espacio disponible */
 }
 
 .background-container {
@@ -78,6 +88,7 @@ header {
 }
 
 nav {
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,7 +105,6 @@ nav {
     color:#000000;
     font-weight: bold;
 }
-
 
 .enlaces {
     display: flex; /* Utiliza flexbox para alinear los elementos dentro de .enlaces */
@@ -248,7 +258,7 @@ background-color: red;
     background-color: white;
     display: flex;
     width: 485px;
-    height: 506px;
+    height: 535px;
     flex-direction: column;
     align-items: center;
 }
@@ -301,6 +311,9 @@ form{
 }
 label{
     display: block;
+}
+.label1 , .label2{
+    font-size: 13px;
 }
 .label1{
     margin: 26px 0 5px;
@@ -367,8 +380,6 @@ input:focus {
     object-fit: cover; /* Asegura que la imagen se ajuste bien */
 }
 
-
-
 .foto h3 {
     padding: 10px; /* Añade padding interno al título del pin */
     font-size: 16px; /* Establece un tamaño de fuente específico para el título */
@@ -397,6 +408,8 @@ footer .informacion a {
     color: #333; /* Establece un color de texto gris oscuro para los enlaces en el pie de página */
 }
 .optionO{
+    margin-left: 46px; /* Añade un margen izquierdo específico para la opción */
+    margin-right: 46px; /* Añade un margen derecho específico para la opción */
     margin-bottom: 8px; /* Espacio entre las opciones */
     margin-top: 8px; /* Espacio entre las opciones */
     overflow: hidden; /* Oculta el contenido que excede el ancho de la opción */
@@ -450,4 +463,184 @@ footer .informacion a {
 .capa1 {
     position: relative; /* Crea un contexto de apilamiento */
     z-index: 1; /* Este elemento estará detrás */
+}
+/* Contenedor principal que ocupa el espacio restante */
+/*MEDIA QUERY*/
+/* Media query para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente */
+    }
+
+    .background-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas */
+        grid-template-rows: repeat(4, 1fr); /* Aumenta a 4 filas */
+    }
+
+    header {
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .buscador input {
+        width: 100%; /* Asegura que el buscador ocupe todo el ancho */
+    }
+
+    .iniciar_sesion, .registrate {
+        width: 100%; /* Botones ocupan todo el ancho */
+        margin: 5px 0; /* Espaciado vertical entre botones */
+    }
+
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Media query para pantallas entre 768px y 1200px (tabletas) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    body {
+        font-size: 16px; /* Ajusta el tamaño de fuente */
+    }
+
+    .background-container {
+        grid-template-columns: repeat(3, 1fr); /* Reduce a 3 columnas */
+        grid-template-rows: repeat(3, 1fr); /* Mantiene 3 filas */
+    }
+
+    header {
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    .buscador input {
+        width: 80%; /* Ajusta el ancho del buscador */
+    }
+
+    .iniciar_sesion, .registrate {
+        width: auto; /* Botones con ancho automático */
+        margin: 10px; /* Espaciado entre botones */
+    }
+
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Media query para pantallas mayores a 1200px (pantallas grandes) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de fuente */
+    }
+
+    .background-container {
+        grid-template-columns: repeat(5, 1fr); /* Mantiene 5 columnas */
+        grid-template-rows: repeat(3, 1fr); /* Mantiene 3 filas */
+    }
+
+    .buscador input {
+        width: 60%; /* Ajusta el ancho del buscador */
+    }
+
+    .iniciar_sesion, .registrate {
+        width: auto; /* Botones con ancho automático */
+        margin: 15px; /* Espaciado entre botones */
+    }
+
+    /* Ajustes adicionales según sea necesario */
+}
+
+/* Media query para pantallas mayores a 800px de alto (pantallas grandes) */
+@media (min-height: 100px) {
+    body {
+        font-size: 16px; /* Aumenta el tamaño de fuente */
+        height: 100vh; /* Mantiene el body al 100% de la altura de la ventana */
+    }
+
+    .background-container {
+        grid-template-columns: repeat(5, 1fr); /* Mantiene 5 columnas */
+        grid-template-rows: repeat(3, 1fr); /* Mantiene 3 filas */
+        gap: 20px; /* Ajusta el espacio entre elementos */
+    }
+    .iniciarsesion{
+        height: 627px;
+        max-height: 629px;
+        width: 500px;
+        max-width: 500px;
+    }
+
+    .background-container div {
+        height: 100%; /* Asegura que los divs llenen completamente cada celda */
+        border-radius: 25px; /* Ajusta el radio de los bordes */
+    }
+
+    footer {
+        padding: 15px; /* Aumenta el padding del footer */
+        font-size: 14px; /* Ajusta el tamaño de fuente del footer */
+    }
+
+    p, label {
+        font-size: 16px; /* Ajusta el tamaño de fuente de p y label */
+        margin: 10px 50px 0 50px;
+    }
+
+    input {
+        padding: 12px; /* Ajusta el padding de los inputs */
+        font-size: 16px; /* Ajusta el tamaño de fuente de los inputs */
+    }
+    /* Ajustes adicionales según sea necesario */
+}
+/* Media query para pantallas menores a 600px de alto */
+@media (max-height: 600px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente */
+    }
+
+    .background-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas */
+        grid-template-rows: repeat(3, 1fr); /* Ajusta el número de filas */
+    }
+
+    header {
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .buscador input {
+        width: 100%; /* Asegura que el buscador ocupe todo el ancho */
+    }
+
+    .iniciar_sesion, .registrate {
+        width: 100%; /* Botones ocupan todo el ancho */
+        margin: 5px 0; /* Espaciado vertical entre botones */
+    }
+}
+
+/* Media query para pantallas mayores a 800px de alto */
+@media (min-height: 800px) {
+    body {
+        font-size: 18px; /* Aumenta el tamaño de fuente */
+        width: 1200px; /* Ajusta el ancho de la página */
+        max-width: 1500px; /* Ajusta el máximo ancho */
+    }
+    #ajusteIniciarSesion{
+        width: 1200px; /* Ajusta el ancho de la página */
+        max-width: 1500px; /* Ajusta el máximo ancho */
+        height: 1000px; /* Ajusta la altura */
+        max-height: 1000px; /* Ajusta el máximo alto */
+    }
+    .iniciarsesion{
+        height: 1000px;
+        max-height: 1000px;
+        width: 600px;
+        max-width: 800px;
+    }
+
+    .background-container {
+        grid-template-columns: repeat(5, 1fr); /* Mantiene 5 columnas */
+        grid-template-rows: repeat(4, 1fr); /* Aumenta a 4 filas */
+        width: 1200px; /* Ajusta el ancho de la grid */
+        max-width: 1500px; /* Ajusta el máximo ancho */
+        }
+
+    .buscador input {
+        width: 60%; /* Ajusta el ancho del buscador */
+    }
+
+    .iniciar_sesion, .registrate {
+        width: auto; /* Botones con ancho automático */
+        margin: 15px; /* Espaciado entre botones */
+    }
 }
